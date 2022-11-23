@@ -15,7 +15,7 @@ export default function Weather(props){
     wind: response.data.wind.speed,
     humidity: response.data.main.humidity,
     description: response.data.weather[0].main,
-    icon: "https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   });
 }
 function search(){
