@@ -40,3 +40,6 @@ list-style: none;
 margin-right: 8px;
 margin-top: 4px;
 }
+.Weather a {
+  text-decoration: none;
+}
