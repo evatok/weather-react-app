@@ -1,11 +1,8 @@
 
 .Weather {
-
-    
     border: 1px solid #dadde1;
     border-radius: 4px;
     padding: 16px;
-
     color: #878787;
 }
 
@@ -25,11 +22,6 @@ font-weight: 100;
 line-height: 19px;
 list-style: none;
 }
-.Weather img {
-  margin-right: 10px;
-  position: relative;
-  top: -14px;
-}
 .Weather .temperature {
   font-weight: 400;
   color: rgb(33, 33, 33);
@@ -42,4 +34,9 @@ list-style: none;
   font-size: 16px;
   position: relative;
   top: -34px;
+}
+
+.Weather canvas {
+margin-right: 8px;
+margin-top: 4px;
 }
