@@ -23,6 +23,7 @@ line-height: 19px;
 list-style: none;
 }
 .Weather .temperature {
+  margin-left: 8px;
   font-weight: 400;
   color: rgb(33, 33, 33);
   font-size: 64px;
@@ -37,7 +38,6 @@ list-style: none;
 }
 
 .Weather canvas {
-margin-right: 8px;
 margin-top: 4px;
 }
 .Weather a {
