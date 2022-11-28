@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
 
-<Weather defaultCity="Helsinki" />
+<Weather defaultCity="New York" />
 
 <footer>
   This project was coded by {" "}<a href="https://bucolic-liger-7233b0.netlify.app/index.html" target="_blank" rel="noreferrer" >Eva Tokarchuk</a>
