@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css"
 import axios from "axios";
 
@@ -10,20 +11,17 @@ let [forecast, setForecast] = useState(null);
     function handleResponse(response) {
         setForecast(response.data.daily);
         setLoaded(true);
+       
     }
-    console.log(forecast)
+   
 
     if (loaded) {    
+        console.log(forecast)
         return (
             <div className="WeatherForecast">
               <div className="row mt-4">
                 <div className="col">
-                   <div className="WeatherForecast-day">Thu</div>
-                   <WeatherIcon code="01d" size={32} />
-                   <div className="WeatherForecast-temp">
-                    <span className="WeatherForecast-temp-max">{forecast[0].temp.max}°</span>
-                    <span className="WeatherForecast-temp-min">{forecast[0].temp.min}°</span>
-                    </div>
+                  <WeatherForecastDay data={forecast[0]} />
                    </div>
                    </div>  
             </div>
