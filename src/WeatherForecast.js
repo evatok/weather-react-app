@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css"
 import axios from "axios";
@@ -16,14 +15,20 @@ let [forecast, setForecast] = useState(null);
    
 
     if (loaded) {    
-        console.log(forecast)
         return (
             <div className="WeatherForecast">
               <div className="row mt-4">
-                <div className="col">
-                  <WeatherForecastDay data={forecast[0]} />
-                   </div>
-                   </div>  
+                {forecast.map(function(dailyForecast, index) {
+                    if (index < 5) {
+                    return (
+                        <div className="col" key={index}>
+                        <WeatherForecastDay data={dailyForecast} />
+                        </div>
+                    );
+                 }
+                })}
+               
+              </div>  
             </div>
         
            );
